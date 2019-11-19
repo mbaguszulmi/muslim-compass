@@ -45,15 +45,17 @@ class _CompassState extends State<Compass> with TickerProviderStateMixin {
     );
 
     FlutterCompass.events.listen((double direction) {
-      setState(() {
-        _rotateController.stop();
-        _beforedeg = rotateTween.value;
-        _directionDeg = -((direction ?? 0)/360);
-        if ((_directionDeg - _beforedeg).abs() > ((_directionDeg-1) - _beforedeg).abs()) {
-          _directionDeg = _directionDeg-1;
-        }
-        _rotateController.forward(from: _beforedeg);
-      });
+      if (this.mounted){
+        setState(() {
+          _rotateController.stop();
+          _beforedeg = rotateTween.value;
+          _directionDeg = -((direction ?? 0)/360);
+          if ((_directionDeg - _beforedeg).abs() > ((_directionDeg-1) - _beforedeg).abs()) {
+            _directionDeg = _directionDeg-1;
+          }
+          _rotateController.forward(from: _beforedeg);
+        });
+      }
     });
 
     _rotateController.forward();
@@ -64,7 +66,6 @@ class _CompassState extends State<Compass> with TickerProviderStateMixin {
   @override
   void dispose() {
     _rotateController.dispose();
-    FlutterCompass.events.listen(null);
     super.dispose();
   }
 
@@ -92,6 +93,7 @@ class _CompassState extends State<Compass> with TickerProviderStateMixin {
         child: Column(
           mainAxisSize: MainAxisSize.max,
           children: <Widget>[
+            // Compass
             Container(
               padding: EdgeInsets.all(20),
               alignment: Alignment.center,
@@ -116,8 +118,6 @@ class _CompassState extends State<Compass> with TickerProviderStateMixin {
                         alignment: Alignment.center,
                         child: Transform.translate(
                           offset: Offset(
-                            // _getPosXKaabah(_headingAngleDeg, MediaQuery.of(context).size.width * 0.4),
-                            // _getPosYKaabah(_headingAngleDeg, MediaQuery.of(context).size.width * 0.4),
                             _kaabahX * MediaQuery.of(context).size.width * 0.4,
                             _kaabahY * MediaQuery.of(context).size.width * 0.4
                           ),
@@ -133,6 +133,144 @@ class _CompassState extends State<Compass> with TickerProviderStateMixin {
                       ),
                     ],
                 )
+              ),
+            ),
+
+            // Location details
+            Container(
+              padding: EdgeInsets.all(20),
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisSize: MainAxisSize.min,
+                children: <Widget>[
+                  Container(
+                    width: (MediaQuery.of(context).size.width - 40) * 0.5,
+                    padding: EdgeInsets.all(8),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          mainAxisSize: MainAxisSize.max,
+                          children: <Widget>[
+                            Flexible(
+                              child: Container(
+                                child: Text(
+                                  'Malang',
+                                  overflow: TextOverflow.fade,
+                                  maxLines: 1,
+                                  textAlign: TextAlign.end,
+                                  softWrap: false,
+                                ),
+                              )
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            SvgPicture.asset(
+                              'assets/icons/ic-sharp-location-on.svg',
+                              semanticsLabel: 'LocationPin',
+                              width: 24
+                            )
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          mainAxisSize: MainAxisSize.max,
+                          children: <Widget>[
+                            Flexible(
+                              child: Container(
+                                child: Text(
+                                  '-7.983908, 112.621391',
+                                  overflow: TextOverflow.fade,
+                                  maxLines: 1,
+                                  textAlign: TextAlign.end,
+                                  softWrap: false,
+                                ),
+                              )
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            SvgPicture.asset(
+                              'assets/icons/ic-baseline-my-location.svg',
+                              semanticsLabel: 'LocationCircle',
+                              width: 24
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                  Container(
+                    width: (MediaQuery.of(context).size.width - 40) * 0.5,
+                    padding: EdgeInsets.all(8),
+                    decoration: BoxDecoration(
+                      border: Border(
+                        left: BorderSide(
+                          width: 1, 
+                          color: Colors.black
+                        )
+                      )
+                    ),
+                    child: Column(
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            SvgPicture.asset(
+                              'assets/icons/mdi-angle-acute.svg',
+                              semanticsLabel: 'AngleAcute',
+                              width: 24
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Flexible(
+                              child: Container(
+                                child: Text(
+                                  '${_headingAngleDeg.round()}°',
+                                  overflow: TextOverflow.fade,
+                                  maxLines: 1,
+                                  softWrap: false,
+                                ),
+                              )
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            SvgPicture.asset(
+                              'assets/icons/mdi-ruler.svg',
+                              semanticsLabel: 'MdiRuler',
+                              width: 24
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Flexible(
+                              child: Container(
+                                child: Text(
+                                  '8.388km',
+                                  overflow: TextOverflow.fade,
+                                  maxLines: 1,
+                                  textAlign: TextAlign.end,
+                                  softWrap: false,
+                                ),
+                              )
+                            ),
+                          ],
+                        ),
+                      ],
+                    )
+                  )
+                ],
               ),
             )
           ],
