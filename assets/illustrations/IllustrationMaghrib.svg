@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="371" height="191" fill="none" version="1.1" viewBox="0 0 371 191" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <radialGradient id="paint0_radial" cx="0" cy="0" r="1" gradientTransform="translate(371.58 143.87) rotate(90) scale(220.13 219.49)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#D99613" stop-opacity=".4" offset="0"/>
+   <stop stop-color="#C89D30" stop-opacity="0" offset="1"/>
+  </radialGradient>
+  <radialGradient id="paint1_radial" cx="0" cy="0" r="1" gradientTransform="translate(19.587 110.93) rotate(90) scale(54.14 53.982)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#E6DE96" stop-opacity=".16" offset="0"/>
+   <stop stop-color="#E6DE96" stop-opacity="0" offset="1"/>
+  </radialGradient>
+  <linearGradient id="paint2_linear" x1="115.79" x2="115.79" y1="69.326" y2="202.8" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fff" stop-opacity=".05" offset="0"/>
+   <stop stop-color="#fff" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <linearGradient id="paint3_linear" x1="280.27" x2="280.27" y1="111.5" y2="210.89" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#fff" stop-opacity=".08" offset="0"/>
+   <stop stop-color="#fff" stop-opacity="0" offset="1"/>
+  </linearGradient>
+  <clipPath id="clipPath883">
+   <path d="m0 0h371v190.67h-371z" fill="#fff"/>
+  </clipPath>
+ </defs>
+ <g clip-path="url(#clipPath883)">
+  <path d="M0 0H371V190.667H0V0Z" fill="#1B315A"/>
+  <g fill="#F5F5F5">
+   <ellipse cx="57.033" cy="28.311" rx="1.7283" ry="1.7333"/>
+   <ellipse cx="45.511" cy="74.533" rx="1.7283" ry="1.7333"/>
+   <ellipse cx="80.076" cy="16.756" rx="1.7283" ry="1.7333"/>
+   <ellipse cx="99.663" cy="37.556" rx="1.7283" ry="1.7333"/>
+   <ellipse cx="130.77" cy="23.689" rx="1.7283" ry="1.7333"/>
+   <ellipse cx="161.88" cy="68.756" rx="1.7283" ry="1.7333"/>
+   <ellipse cx="206.82" cy="108.04" rx="1.7283" ry="1.7333"/>
+   <ellipse cx="205.66" cy="54.889" rx="1.7283" ry="1.7333"/>
+   <ellipse cx="195.29" cy="6.3556" rx="1.7283" ry="1.7333"/>
+   <ellipse cx="272.49" cy="13.289" rx="1.7283" ry="1.7333"/>
+   <ellipse cx="349.68" cy="47.956" rx="1.7282" ry="1.7333"/>
+   <ellipse cx="287.47" cy="82.622" rx="1.7282" ry="1.7333"/>
+   <ellipse cx="341.62" cy="117.29" rx="1.7283" ry="1.7333"/>
+  </g>
+  <ellipse cx="371.58" cy="143.87" rx="219.49" ry="220.13" fill="url(#paint0_radial)"/>
+  <ellipse cx="19.587" cy="110.93" rx="63.37" ry="63.556" fill="url(#paint1_radial)"/>
+  <path d="m10.37 116.71c10.181 0 18.435-8.278 18.435-18.489 0-4.9108-1.909-9.3744-5.0232-12.685 6.9747 2.6355 11.936 9.3903 11.936 17.307 0 10.212-8.2535 18.489-18.435 18.489-5.2848 0-10.05-2.23-13.412-5.803 2.0211 0.763 4.2112 1.181 6.4986 1.181z" clip-rule="evenodd" fill="#E7DE96" fill-rule="evenodd"/>
+  <path d="m116.37 69.333c-24.426 0.9244-91.598 82.43-122.13 123.07l243.11 10.4c-30.149-44.874-96.552-134.39-120.98-133.47z" fill="#0E1A2D"/>
+  <path d="m116.37 69.333c-24.426 0.9244-91.598 82.43-122.13 123.07l243.11 10.4c-30.149-44.874-96.552-134.39-120.98-133.47z" fill="url(#paint2_linear)"/>
+  <path d="m279.98 111.51c-19.356 0.925-80.268 66.637-108.3 99.378h217.18c-28.229-33.511-89.524-100.3-108.88-99.378z" fill="#08101C"/>
+  <path d="m279.98 111.51c-19.356 0.925-80.268 66.637-108.3 99.378h217.18c-28.229-33.511-89.524-100.3-108.88-99.378z" fill="url(#paint3_linear)"/>
+ </g>
+</svg>

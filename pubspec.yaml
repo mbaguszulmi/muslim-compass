@@ -55,6 +55,17 @@ flutter:
     - assets/icons/mdi-angle-acute.svg
     - assets/icons/mdi-ruler.svg
     - assets/icons/mdi-calendar-month-outline.svg
+    - assets/illustrations/IllustrationAshar.svg
+    - assets/illustrations/IllustrationDuha.svg
+    - assets/illustrations/IllustrationDzuhur.svg
+    - assets/illustrations/IllustrationImsak.svg
+    - assets/illustrations/IllustrationIsya.svg
+    - assets/illustrations/IllustrationMaghrib.svg
+    - assets/illustrations/IllustrationSubuh.svg
+    - assets/illustrations/IllustrationTerbit.svg
+    - assets/icons/mdi-clipboard-list-outline.svg
+    - assets/icons/mdi-timer-sand.svg
+    - assets/icons/mdi-clock-outline.svg
 
   fonts:
     - family: Montserrat
