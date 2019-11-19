@@ -5,26 +5,39 @@
 // gestures. You can also use WidgetTester to find child widgets in the widget
 // tree, read text, and verify that the values of widget properties are correct.
 
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:muslimcompass/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
+  testWidgets('Navigation menu test', (WidgetTester tester) async {
     await tester.pumpWidget(MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    await tester.pumpAndSettle();
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    expect(find.bySemanticsLabel('CompassIcon'), findsOneWidget);
+    await tester.tap(find.bySemanticsLabel('CompassIcon'));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(find.text('Kiblat'), findsWidgets);
+    expect(find.text('Jadwal'), findsNothing);
+    expect(find.text('Pengaturan'), findsNothing);
+
+    expect(find.bySemanticsLabel('Mosque'), findsOneWidget);
+    await tester.tap(find.bySemanticsLabel('Mosque'));
+    await tester.pump();
+
+    expect(find.text('Kiblat'), findsNothing);
+    expect(find.text('Jadwal'), findsOneWidget);
+    expect(find.text('Pengaturan'), findsNothing);
+
+    expect(find.bySemanticsLabel('Cog'), findsOneWidget);
+    await tester.tap(find.bySemanticsLabel('Cog'));
+    await tester.pump();
+
+    expect(find.text('Kiblat'), findsNothing);
+    expect(find.text('Jadwal'), findsNothing);
+    expect(find.text('Pengaturan'), findsWidgets);
   });
 }

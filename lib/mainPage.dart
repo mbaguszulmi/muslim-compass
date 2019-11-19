@@ -79,7 +79,7 @@ class _MainPageState extends State<MainPage> {
                       children: <Widget>[
                         SvgPicture.asset(
                           'assets/icons/fa-solid_compass.svg',
-                          semanticsLabel: 'Compass',
+                          semanticsLabel: 'CompassIcon',
                           height: 24,
                         ),
                         (_currentPage == 0 ? Container(

@@ -48,6 +48,7 @@ flutter:
     - assets/icons/fa-solid_compass.svg
     - assets/icons/fa-solid_mosque.svg
     - assets/icons/Compass.svg
+    - assets/icons/kabah.svg
 
   fonts:
     - family: Montserrat
