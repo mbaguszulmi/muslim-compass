@@ -21,6 +21,7 @@ dependencies:
     sdk: flutter
   flutter_svg: ^0.14.4
   flutter_compass: ^0.3.4
+  intl: ^0.16.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -53,6 +54,7 @@ flutter:
     - assets/icons/ic-baseline-my-location.svg
     - assets/icons/mdi-angle-acute.svg
     - assets/icons/mdi-ruler.svg
+    - assets/icons/mdi-calendar-month-outline.svg
 
   fonts:
     - family: Montserrat
