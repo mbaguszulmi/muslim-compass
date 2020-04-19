@@ -66,6 +66,12 @@ flutter:
     - assets/icons/mdi-clipboard-list-outline.svg
     - assets/icons/mdi-timer-sand.svg
     - assets/icons/mdi-clock-outline.svg
+    - assets/icons/ic-round-translate.svg
+    - assets/icons/mdi-bell-ring-outline.svg
+    - assets/icons/mdi-cog-counterclockwise.svg
+    - assets/icons/mdi-information-outline.svg
+    - assets/icons/mdi-share-variant.svg
+    - assets/icons/mdi-star.svg
 
   fonts:
     - family: Montserrat
