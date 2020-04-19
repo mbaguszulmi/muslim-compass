@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'themes/colorTheme.dart' as Theme;
-import 'mainPage.dart';
+import 'ui/mainPage.dart';
 
 void main() => runApp(MyApp());
 
