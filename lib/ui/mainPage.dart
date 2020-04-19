@@ -9,7 +9,7 @@ class MainPage extends StatefulWidget {
   _MainPageState createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _MainPageState extends State<MainPage> with TickerProviderStateMixin {
   int _currentPage = 0;
   final _pages = <Widget>[
     Compass(),
@@ -82,19 +82,23 @@ class _MainPageState extends State<MainPage> {
                           semanticsLabel: 'CompassIcon',
                           height: 24,
                         ),
-                        (_currentPage == 0 ? Container(
-                          height: MediaQuery.of(context).size.width,
-                          margin: EdgeInsets.only(left: 10),
-                          alignment: Alignment.center,
-                          padding: EdgeInsets.only(bottom: 5),
-                          child: Text(
-                            'Kiblat',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16
+                        AnimatedSize(
+                          duration: Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                          vsync: this,
+                          child: Container(
+                            height: MediaQuery.of(context).size.width,
+                            margin: _currentPage == 0 ? EdgeInsets.only(left: 10) : null,
+                            alignment: Alignment.center,
+                            child: Text(
+                              (_currentPage == 0 ? 'Kiblat' : ''),
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16
+                              ),
                             ),
                           ),
-                        ) : Container())
+                        )
                       ],
                     )
                   ),
@@ -124,19 +128,23 @@ class _MainPageState extends State<MainPage> {
                           semanticsLabel: 'Mosque',
                           height: 24,
                         ),
-                        (_currentPage == 1 ? Container(
-                          height: MediaQuery.of(context).size.width,
-                          margin: EdgeInsets.only(left: 10),
-                          alignment: Alignment.center,
-                          padding: EdgeInsets.only(bottom: 5),
-                          child: Text(
-                            'Jadwal',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16
-                            ),
+                        AnimatedSize(
+                          duration: Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                          vsync: this,
+                          child: Container(
+                            height: MediaQuery.of(context).size.width,
+                            margin: _currentPage == 1 ? EdgeInsets.only(left: 10) : null,
+                            alignment: Alignment.center,
+                            child: Text(
+                              (_currentPage == 1 ? 'Jadwal' : ''),
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16
+                              ),
+                            )
                           ),
-                        ) : Container())
+                        )
                       ],
                     )
                   ),
@@ -166,19 +174,23 @@ class _MainPageState extends State<MainPage> {
                           semanticsLabel: 'Cog',
                           height: 24,
                         ),
-                        (_currentPage == 2 ? Container(
-                          height: MediaQuery.of(context).size.width,
-                          margin: EdgeInsets.only(left: 10),
-                          alignment: Alignment.center,
-                          padding: EdgeInsets.only(bottom: 5),
-                          child: Text(
-                            'Pengaturan',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16
+                        AnimatedSize(
+                          duration: Duration(milliseconds: 300),
+                          curve: Curves.easeInOut,
+                          vsync: this,
+                          child: Container(
+                            height: MediaQuery.of(context).size.width,
+                            margin: _currentPage == 2 ? EdgeInsets.only(left: 10) : null,
+                            alignment: Alignment.center,
+                            child: Text(
+                              (_currentPage == 2 ? 'Pengaturan' : ''),
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 16
+                              ),
                             ),
                           ),
-                        ) : Container())
+                        )
                       ],
                     )
                   )
